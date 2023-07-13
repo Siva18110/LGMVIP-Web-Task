@@ -1,0 +1,96 @@
+ html,
+    body {
+      background-size:cover;
+      background:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(d3.jpg);
+      font-family: cursive;
+      font-style: oblique;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      color:#fff;
+      letter-spacing: 2px;
+      text-decoration: ;
+    }
+
+    .container {
+      max-width: 390px;
+      max-height: 800px;
+      margin: 3vh auto 0 auto;
+      box-shadow: 0px 0px 10px gray;
+      border-radius: 20px;
+      border:1px solid white;
+    }
+
+    #display {
+      background-color: #69f056;
+      text-align: right;
+      height: 85px;
+      line-height: 70px;
+      padding: 16px 8px;
+      font-size: 30px;
+      border-radius:20px ;
+    }
+
+    .buttons {
+      background-color: #CBE5FB;
+      display: grid;
+      border-bottom: 1px solid gray;
+      border-left: 1px solid gray;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      border-radius: 20px;
+    }
+
+    .buttons>div {
+      border-top: 1px solid gray;
+      border-right: 1px solid gray;
+    }
+
+    .button {
+      border: 0.5px solid gray;
+      line-height: 77px;
+      text-align: center;
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    #equal {
+      background-color: darkorchid;
+      color: black;
+    }
+    #equal:hover{
+      background-color: #fff;
+    }
+    #equal:active{
+      background-color: orange;
+    }
+
+    #C {
+      background-color: red;
+      color:black;
+    }
+    #C:hover{
+      background-color: #fff;
+    }
+    #C:active{
+      background-color: orange;
+    }
+
+    .button:hover {
+      background-color: black;
+      color: white;
+      transition: 0.3s ease-in-out;
+    }
+    .button:active{
+      background-color: orange;
+    }
+    .dv{
+      background-color: #333;
+      font-weight: bold;
+      float: right;
+      letter-spacing: 2px;
+      color: #fff;
+      border-radius: 10px;
+    }

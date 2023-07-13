@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Card Grid</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">LetsGrowMore</div>
+    <button id="getUsersBtn">Get Users</button>
+  </div>
+  <div class="user-grid"></div>
+
+  <script>
+    document.getElementById('getUsersBtn').addEventListener('click', getUsers);
+
+    function getUsers() {
+      const userGrid = document.querySelector('.user-grid');
+      userGrid.innerHTML = '<div class="loader">Loading...</div>';
+
+      fetch('https://reqres.in/api/users?page=1')
+        .then(response => response.json())
+        .then(data => {
+          const users = data.data;
+          let userCards = '';
+
+          users.forEach(user => {
+            userCards += `
+              <div class="user-card">
+                <img src="${user.avatar}" alt="${user.first_name}">
+                <h3>${user.first_name} ${user.last_name}</h3>
+                <p>${user.email}</p>
+              </div>
+            `;
+          });
+
+          userGrid.innerHTML = userCards;
+        })
+        .catch(error => {
+          console.log(error);
+          userGrid.innerHTML = '<div class="loader">Error loading users</div>';
+        });
+    }
+  </script>
+</body>
+</html>
